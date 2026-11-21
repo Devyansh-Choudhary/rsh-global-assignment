@@ -20,11 +20,14 @@ incidents on the first possible Monday.
 - A festive discount ended in the last week (network −11%): detection is peer-normalised.
 - Every check is logged; bad rows are quarantined, not dropped.
 
-**How I used AI.** I designed the product and wrote its specification: a decision system rather than a dashboard,
-these five detectors, explainable ranking with no double counting, rupees split into observed, estimated and
-recoverable, one brief per team, and no hard-coded incidents. Claude Code (Anthropic) implemented that spec in
-Python, including the 44 tests. I ran the review rounds, including a recruiter-style critique that led to the
-code split, CI and the demo video.
+**How I used AI.** I used Claude Code (Anthropic) to build faster. I set the direction in a written spec:
+- a decision tool rather than a dashboard
+- which problems it must catch, and which team owns each one
+- how issues are ranked and costed: rupees split into observed, estimated and recoverable, with nothing counted twice
+- the bar for done: no hard-coded answers, every number traceable to the data
+
+Claude Code wrote the Python and the 44 tests against that spec. I ran the review rounds, which led to the code
+split, CI and the demo video.
 
 **What I verified myself, in the raw CSVs.**
 - BLK-WH-01's Neem Face Wash 100ml fill dropped from 236/240 to 132/240 on 21 Sep.
