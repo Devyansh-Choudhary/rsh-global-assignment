@@ -1,0 +1,53 @@
+
+
+[QC Manager]
+*Joy Quick Commerce – Monday brief, Mon 16 Nov*
+Last week: GMV ₹19.42L (-10.8% WoW, like-for-like -11.6%), availability 90.7%, PO fill 95.6%.
+_Deeper platform discounts ended this week (avg 15% → 8% off MRP), which moves sales across every SKU. Alerts below are measured against each SKU's platform peers, so these network-wide shifts do not trigger them._
+
+*3 issues need action* – est. ₹36.8K–₹51.6K/week at risk:
+🔴 1. Zepto Mumbai: warehouse stopped ordering Joy Almond Milk Lotion 200ml → *Platform KAM*, Today (Mon 16 Nov) (₹11.2K–₹13.7K/wk)
+🔴 2. Zepto Bengaluru: Joy Neem Face Wash 100ml fell from #3 to #13 in search → *Marketing*, Today (Mon 16 Nov) (₹9.5K–₹11.4K/wk)
+🔴 3. Blinkit Delhi NCR: we delivered only 48% of ordered stock on 2 SKUs → *Supply*, Today (Mon 16 Nov) (₹8.2K–₹17.9K/wk)
+
+Watching (no action yet): Blinkit Hyderabad: Joy Papaya Face Wash 100ml selling 45% below expected; Blinkit Mumbai: Joy Sun Shield SPF50 50ml selling 40% below expected
+
+------------------------------------------------------------
+
+[Supply]
+*Joy Supply – actions for Mon 16 Nov*
+
+🔴 *Zepto Mumbai – ZEP-WH-08* (Stand-by stock (platform not ordering))
+• Almond Milk Lotion 200ml (JY-LT-ALM-200): ~114 units/week
+➡️ Keep ~114 units ready to ship to ZEP-WH-08 within 48h of the KAM securing a PO.
+Due: Today (Mon 16 Nov) · est. ₹11.2K–₹13.7K/week at risk
+
+🔴 *Blinkit Delhi NCR – BLK-WH-03* (Under-delivery)
+• Night Repair Cream 50ml (JY-CR-NIGHT-50): delivered 33/72 since start (46%); last PO short 39 units
+• Almond Milk Lotion 400ml (JY-LT-ALM-400): delivered 60/120 since start (50%); last PO short 60 units
+➡️ Supply: dispatch an off-cycle top-up of the 99-unit shortfall from the latest PO to BLK-WH-03 today, confirm depot stock for Night Repair Cream 50ml, Almond Milk Lotion 400ml, and commit to ≥95% fill on the PO of 16 Nov. Find out why these SKUs were short-shipped (allocation, production or picking).
+Due: Today (Mon 16 Nov) · est. ₹8.2K–₹17.9K/week at risk
+
+------------------------------------------------------------
+
+[Platform KAM]
+*Joy Platform KAMs – escalations for Mon 16 Nov*
+
+*Zepto*
+🔴 Mumbai / ZEP-WH-08 – Ordering stopped
+• Almond Milk Lotion 200ml: no PO for 2 week(s) (last 26 Oct, ~114/wk); availability now 0%, 12/12 stores out
+➡️ Zepto KAM: escalate today - ask ZEP-WH-08 to raise an off-cycle PO of ~114 units and check whether Almond Milk Lotion 200ml is blocked, delisted or mis-configured in their auto-replenishment. Supply: hold stock ready to ship within 48h.
+🔴 Bengaluru / ZEP-WH-07 – Ranking / listing check
+• Neem Face Wash 100ml: search rank #3 → #13
+➡️ Ask Zepto whether a search-algorithm, listing or content change affected Joy Neem Face Wash 100ml in Bengaluru around 14 Oct; support Marketing's ad push.
+
+------------------------------------------------------------
+
+[Marketing]
+*Joy Marketing – search visibility, Mon 16 Nov*
+
+🔴 *Zepto Bengaluru: Joy Neem Face Wash 100ml fell from #3 to #13 in search*
+Stock is fine (89% available), so this is visibility, not supply. Est. lost so far ₹44.2K–₹52.7K; ₹9.5K–₹11.4K/week at risk; ~₹8.9K recoverable next week if ads go live now.
+➡️ Marketing: launch sponsored-search ads on Zepto for 'face wash' in Bengaluru for Neem Face Wash 100ml this week; audit the listing (title, images, ratings, price vs competitors). Zepto KAM: ask whether a ranking/listing change happened around 14 Oct.
+
+⏸ Don't spend on ads for these until back in stock: Zepto Mumbai: Almond Milk Lotion 200ml; Blinkit Delhi NCR: Night Repair Cream 50ml, Almond Milk Lotion 400ml

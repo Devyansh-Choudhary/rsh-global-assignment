@@ -1,0 +1,29 @@
+dataset,check,rows_affected,action,detail
+daily_sales,Missing / blank values,0,Verified,No blank cells in any column
+dark_stores,Missing / blank values,0,Verified,No blank cells in any column
+products,Missing / blank values,0,Verified,No blank cells in any column
+purchase_orders,Missing / blank values,0,Verified,No blank cells in any column
+products,ID mapping integrity,0,Verified,45 platform IDs -> 15 SKUs across 3 platforms; each platform ID maps to exactly one SKU
+dark_stores,Whitespace,9,Trimmed,e.g. 'mumbai ' -> 'mumbai'
+dark_stores,Inconsistent city names,64,Standardised,'mumbai ' -> Mumbai; 'Delhi' -> Delhi NCR; 'HYDERABAD' -> Hyderabad; 'Bangalore' -> Bengaluru; 'New Delhi' -> Delhi NCR
+dark_stores,Warehouse mapping integrity,0,Verified,18 warehouses; each serves exactly one platform and one city
+daily_sales,Exact duplicate rows,765,Removed (kept first copy),Dates: 2026-10-02 (765); platforms: Zepto (765)
+daily_sales,Type parsing,0,Verified,All dates and numeric fields parsed
+daily_sales,"Value ranges (availability 0-100, units>=0, price>0, rank>=1)",0,Verified,
+daily_sales,sales_inr = units x price,0,Verified,Holds on every row
+daily_sales,Units sold while 0% available,0,Verified,
+daily_sales,Unique key date x store x product,0,Verified,After removing exact duplicates
+daily_sales,Product ID -> sku_code mapping,0,Verified,"Joined on (platform, platform_product_id)"
+daily_sales,Dark store -> warehouse mapping,0,Verified,
+daily_sales,Store platform matches row platform,0,Verified,
+daily_sales,Sales before store opening date,0,Verified,
+dark_stores,Stores opened during the data window,51,Kept; analysis uses per-store-day rates,"Store count grows over the 10 weeks, so raw totals overstate like-for-like growth"
+purchase_orders,Type parsing,0,Verified,
+purchase_orders,More than one PO per warehouse x SKU x week,0,Verified,
+purchase_orders,Quantities positive,0,Verified,
+purchase_orders,Delivered <= ordered,0,Verified,
+purchase_orders,No delivery recorded,0,Verified,
+purchase_orders,Delivery lag outside 0-14 days,0,Verified,"Observed lags: 2d (870), 3d (921), 4d (903)"
+purchase_orders,PO not raised on a Monday,0,Verified,
+purchase_orders,Warehouse known,0,Verified,
+purchase_orders,SKU known,0,Verified,

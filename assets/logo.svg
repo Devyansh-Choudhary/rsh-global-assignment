@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="40" viewBox="0 0 240 40">
+  <rect x="2" y="8" width="24" height="24" rx="6" fill="#2a78d6"/>
+  <path d="M14 13 L21 20 L14 27 L7 20 Z" fill="#ffffff"/>
+  <text x="34" y="22" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0b0b0b">Joy Command Center</text>
+  <text x="34" y="35" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="9.5" fill="#898781">Quick commerce early warning</text>
+</svg>

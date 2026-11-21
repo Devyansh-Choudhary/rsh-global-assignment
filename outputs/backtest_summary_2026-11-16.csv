@@ -1,0 +1,6 @@
+incident_id,first_flagged,last_flagged,weeks_on_list,first_severity,peak_score,start_week,type,team,platform,city,title,max_skus,peak_severity,first_possible,detection_lag_weeks
+PO-IM-WH-16-0914,2026-09-21,2026-10-05,3,High,72.3,2026-09-14,PO_INACTIVITY,Platform KAM,Instamart,Hyderabad,Instamart Hyderabad: warehouse stopped ordering 2 SKUs,2,Critical,2026-09-21,0
+SUP-BLK-WH-01-0921,2026-09-28,2026-11-09,7,Critical,98.4,2026-09-21,SUPPLY_SHORTFALL,Supply,Blinkit,Bengaluru,Blinkit Bengaluru: we delivered only 52% of ordered stock on 6 SKUs,6,Critical,2026-09-28,0
+RNK-ZEP-WH-07-1012,2026-10-19,2026-11-16,5,Critical,79.5,2026-10-12,SEARCH_RANK_DROP,Marketing,Zepto,Bengaluru,Zepto Bengaluru: Joy Neem Face Wash 100ml fell from #3 to #13 in search,1,Critical,2026-10-19,0
+PO-ZEP-WH-08-1102,2026-11-09,2026-11-16,2,High,79.8,2026-11-02,PO_INACTIVITY,Platform KAM,Zepto,Mumbai,Zepto Mumbai: warehouse stopped ordering Joy Almond Milk Lotion 200ml,1,Critical,2026-11-09,0
+SUP-BLK-WH-03-1109,2026-11-16,2026-11-16,1,Critical,75.4,2026-11-09,SUPPLY_SHORTFALL,Supply,Blinkit,Delhi NCR,Blinkit Delhi NCR: we delivered only 48% of ordered stock on 2 SKUs,2,Critical,2026-11-16,0
