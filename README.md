@@ -24,7 +24,7 @@ python -m pytest -q                         # 44 tests
 - [PDF report](outputs/joy_monday_report_2026-11-16.pdf)
 - [CSV action list](outputs/action_list_2026-11-16.csv)
 - [WhatsApp messages](outputs/whatsapp_messages_2026-11-16.txt)
-- [screenshots of every page](outputs/screenshots/)
+- [screenshots of every page](outputs/screenshots)
 - [submission note](SUBMISSION_NOTE.md)
 - [data audit and incident investigation](docs/ANALYSIS.md)
 
