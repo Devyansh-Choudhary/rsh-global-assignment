@@ -1,6 +1,6 @@
 # Joy Command Center
 
-[![tests](https://github.com/Devyansh-Choudhary/rsh-global-assignemnt/actions/workflows/tests.yml/badge.svg)](https://github.com/Devyansh-Choudhary/rsh-global-assignemnt/actions/workflows/tests.yml)
+[![tests](https://github.com/Devyansh-Choudhary/rsh-global-assignment/actions/workflows/tests.yml/badge.svg)](https://github.com/Devyansh-Choudhary/rsh-global-assignment/actions/workflows/tests.yml)
 
 **A quick-commerce early-warning system for Joy's Monday morning.** It turns the weekly Blinkit, Zepto and Instamart
 exports into a short, ranked list of problems, says who owns each one, puts a rupee estimate on it, and produces the
@@ -212,7 +212,7 @@ recovery are used and the estimate says so. Every estimate shows its reference w
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/Devyansh-Choudhary/rsh-global-assignemnt joy-command-center
+git clone https://github.com/Devyansh-Choudhary/rsh-global-assignment joy-command-center
 cd joy-command-center
 python -m venv .venv
 source .venv/bin/activate                  # Windows: .venv\Scripts\activate
