@@ -1,8 +1,8 @@
 # Tested with: pandas 3.0.5, numpy 2.5.3, streamlit 1.67.0, plotly 7.1.0, reportlab 5.0.1 (Python 3.13)
-# Also passes on: pandas 2.2.3, streamlit 1.40.0, plotly 5.24.1, reportlab 4.2.5
+# Also passes on: Python 3.10 with pandas 2.2.3, streamlit 1.52.0, plotly 5.24.1, reportlab 4.2.5
 pandas>=2.2
 numpy>=1.26
-streamlit>=1.40
+streamlit>=1.52
 plotly>=5.24
 reportlab>=4.2
 pytest>=7.4

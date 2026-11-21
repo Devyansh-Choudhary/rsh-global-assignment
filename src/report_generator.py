@@ -187,7 +187,7 @@ def whatsapp_messages(res: EngineResult) -> dict[str, str]:
         lines.append(f"{SEV_EMOJI[p['severity']]} {p['rank']}. {p['title']} → *{p['team']}*, {p['deadline']} "
                      f"({p['risk']}/wk)")
     if qc["watchlist"]:
-        lines.append(f"\nWatching (no action yet): " + "; ".join(w["title"] for w in qc["watchlist"]))
+        lines.append("\nWatching (no action yet): " + "; ".join(w["title"] for w in qc["watchlist"]))
     msgs["QC Manager"] = "\n".join(lines)
 
     # Supply
@@ -286,7 +286,6 @@ def build_pdf(res: EngineResult, backtest_summary: pd.DataFrame | None = None, c
 
     ink, ink2, muted = colors.HexColor(config.INK["primary"]), colors.HexColor(config.INK["secondary"]), colors.HexColor(config.INK["muted"])
     grid = colors.HexColor(config.INK["grid"])
-    sev_col = {k: colors.HexColor(v) for k, v in config.SEVERITY_COLORS.items()}
     st = {
         "h1": ParagraphStyle("h1", fontName=bold, fontSize=18, leading=22, textColor=ink),
         "h2": ParagraphStyle("h2", fontName=bold, fontSize=12.5, leading=16, textColor=ink, spaceBefore=10, spaceAfter=4),

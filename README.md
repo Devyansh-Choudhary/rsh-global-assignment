@@ -1,5 +1,7 @@
 # Joy Command Center
 
+[![tests](https://github.com/Devyansh-Choudhary/rsh-global-assignemnt/actions/workflows/tests.yml/badge.svg)](https://github.com/Devyansh-Choudhary/rsh-global-assignemnt/actions/workflows/tests.yml)
+
 **A quick-commerce early-warning system for Joy's Monday morning.** It turns the weekly Blinkit, Zepto and Instamart
 exports into a short, ranked list of problems, says who owns each one, puts a rupee estimate on it, and produces the
 PDF, CSV and WhatsApp messages to send to Supply, Marketing and the platform KAMs.
@@ -10,6 +12,17 @@ streamlit run app.py                        # the app (opens on Monday 16 Nov 20
 python scripts/generate_reports.py          # PDF + CSV + WhatsApp text into outputs/
 python -m pytest -q                         # 44 tests
 ```
+
+![Monday brief for 16 Nov 2026](outputs/screenshots/brief.png)
+
+**Deliverables for Monday 16 Nov:**
+- [78-second demo video](outputs/demo_walkthrough.mp4)
+- [PDF report](outputs/joy_monday_report_2026-11-16.pdf)
+- [CSV action list](outputs/action_list_2026-11-16.csv)
+- [WhatsApp messages](outputs/whatsapp_messages_2026-11-16.txt)
+- [screenshots of every page](outputs/screenshots/)
+- [submission note](SUBMISSION_NOTE.md)
+- [data audit and incident investigation](docs/ANALYSIS.md)
 
 ---
 
@@ -28,7 +41,7 @@ The goal is to catch problems like these **in the first week**, without flagging
 
 ## 2. What it does: results on the supplied data
 
-**Monday 16 November 2026: three issues need action.** All are found from the data; none was in the brief.
+**Monday 16 November 2026: three issues need action.** #1 and #3 are new problems the brief does not mention; #2 is brief incident #2, still unresolved five weeks on.
 
 | # | Severity | Issue | Owner | Est. ₹ at risk / week |
 |---|---|---|---|---|
@@ -71,7 +84,8 @@ The sidebar **"Report for Monday"** selector replays any past Monday. You can al
 
 ```
 joy-command-center/
-├── app.py                    Streamlit UI only. Calls the engine and lays out its output
+├── app.py                    Entry point: page setup, sidebar (data source, report Monday), navigation
+├── views/                    One module per app page (brief, command_center, supply, marketing, …)
 ├── config.py                 Every threshold, weight and assumption, each with its justification
 ├── src/
 │   ├── data_loader.py        Reads CSVs as text; schema check
@@ -198,7 +212,7 @@ recovery are used and the estimate says so. Every estimate shows its reference w
 Requires Python 3.10+.
 
 ```bash
-git clone <repo-url> joy-command-center    # or unzip the submission
+git clone https://github.com/Devyansh-Choudhary/rsh-global-assignemnt joy-command-center
 cd joy-command-center
 python -m venv .venv
 source .venv/bin/activate                  # Windows: .venv\Scripts\activate
@@ -246,4 +260,4 @@ python -m pytest -q
 - PDF and WhatsApp generation
 - a headers-only purchase-order export (missing optional data)
 
-Tested with Python 3.13, pandas 3.0, numpy 2.5, Streamlit 1.67, Plotly 7.1, ReportLab 5.0. The suite also passes on pandas 2.2, Streamlit 1.40, Plotly 5.24 and ReportLab 4.2.
+Tested on Python 3.13 with pandas 3.0, Streamlit 1.67, Plotly 7.1 and ReportLab 5.0. Also tested on the oldest supported versions: Python 3.10 with pandas 2.2, Streamlit 1.52, Plotly 5.24 and ReportLab 4.2. CI runs lint and the tests on Python 3.10 and 3.12 on every push.

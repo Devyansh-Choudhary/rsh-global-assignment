@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 import config
-from src.feature_engineering import SEG_KEYS, Features, runs, safe_div, sequential_baseline
+from src.feature_engineering import SEG_KEYS, Features, runs, safe_div
 
 
 def sales_flags(feat: Features) -> pd.DataFrame:

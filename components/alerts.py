@@ -9,7 +9,7 @@ import streamlit as st
 import config
 from components import charts
 from components.theme import platform_tag, severity_pill
-from src.formatting import d, inr, inr_range, num, pct
+from src.formatting import d, inr, inr_range
 
 
 def incident_card(r: pd.Series) -> None:
@@ -56,14 +56,14 @@ def incident_detail(r: pd.Series, res, key: str) -> None:
             start = r["impact_start_week"]
             c1, c2 = st.columns(2)
             c1.plotly_chart(charts.segment_trend(s, "avail", "Availability (%)", start=start, fmt=".1f"),
-                            use_container_width=True, key=f"{key}_a")
+                            width="stretch", key=f"{key}_a")
             c2.plotly_chart(charts.segment_trend(s, "rank", "Search rank (1 = top)", invert=True, start=start, fmt=".1f"),
-                            use_container_width=True, key=f"{key}_r")
+                            width="stretch", key=f"{key}_r")
             c3, c4 = st.columns(2)
             c3.plotly_chart(charts.segment_trend(s, "sales", "Sales (₹ per week)", start=start, fmt=",.0f"),
-                            use_container_width=True, key=f"{key}_s")
+                            width="stretch", key=f"{key}_s")
             po = feat.po_week[(feat.po_week["warehouse_id"] == r["warehouse_id"]) & (feat.po_week["sku_code"] == sku)]
-            c4.plotly_chart(charts.ordered_vs_delivered(po, "Purchase orders (units)"), use_container_width=True, key=f"{key}_po")
+            c4.plotly_chart(charts.ordered_vs_delivered(po, "Purchase orders (units)"), width="stretch", key=f"{key}_po")
             st.caption("Shaded area = incident window. Week labels are the Monday of each week.")
         with t3:
             est = pd.DataFrame([
@@ -75,7 +75,7 @@ def incident_detail(r: pd.Series, res, key: str) -> None:
                 ["Potentially recoverable next week", inr(r["recoverable_next_week"]),
                  f"{config.RECOVERY_FRACTION[r['type']]:.0%} of a week left after the fix's lead time"],
             ], columns=["Measure", "Value", "Basis"])
-            st.dataframe(est, hide_index=True, use_container_width=True)
+            st.dataframe(est, hide_index=True, width="stretch")
             st.caption(f"Reference period: {r['ref_source']}. Estimates assume sales would have continued at the SKU's "
                        "pre-incident rate per store-day, moved in line with unaffected SKUs on the same platform. "
                        "They are not booked losses.")
@@ -83,10 +83,10 @@ def incident_detail(r: pd.Series, res, key: str) -> None:
                     "latest_avail": "Last wk avail %", "last3d_avail": "Last 3d avail %", "ref_weekly_sales": "Ref. ₹/wk",
                     "observed_sales": "Latest ₹", "lost_point": "Lost to date ₹ (est.)", "risk_point": "₹ at risk / wk (est.)",
                     "ref_weeks": "Reference weeks"}
-            st.dataframe(segs[list(cols)].rename(columns=cols).round(1), hide_index=True, use_container_width=True)
+            st.dataframe(segs[list(cols)].rename(columns=cols).round(1), hide_index=True, width="stretch")
         with t4:
             c1, c2 = st.columns([1, 1.2])
-            c1.plotly_chart(charts.score_breakdown(r), use_container_width=True, key=f"{key}_sc")
+            c1.plotly_chart(charts.score_breakdown(r), width="stretch", key=f"{key}_sc")
             c2.markdown(f"**{r['why_ranked']}**")
             c2.caption("Impact: √(weekly ₹ at risk ÷ 1% of network GMV) × 40 · Urgency: worsening 25, active 20, "
                        "recovering 7.5 · Persistence: weeks ÷ 4 × 15 · Breadth: 70% share of stores hit + 30% SKUs (÷5), × 20.")

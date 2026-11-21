@@ -264,7 +264,7 @@ def clean_sales(raw: pd.DataFrame, products: pd.DataFrame, stores: pd.DataFrame,
             "Kept (flagged)" if pre_open.sum() else "Verified")
     n_new = int((stores["opened_date"] >= m["date"].min()).sum())
     log.add("dark_stores", "Stores opened during the data window", n_new, "Kept; analysis uses per-store-day rates",
-            f"Store count grows over the 10 weeks, so raw totals overstate like-for-like growth")
+            "Store count grows over the 10 weeks, so raw totals overstate like-for-like growth")
 
     for c in ["units_sold", "search_rank"]:
         m[c] = m[c].astype(int)
