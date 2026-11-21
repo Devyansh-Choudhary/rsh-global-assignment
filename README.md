@@ -6,6 +6,8 @@
 exports into a short, ranked list of problems, says who owns each one, puts a rupee estimate on it, and produces the
 PDF, CSV and WhatsApp messages to send to Supply, Marketing and the platform KAMs.
 
+**▶ Live app: [rsh-global-assignment-vnqzytwvnjmxkufwffa8z3.streamlit.app](https://rsh-global-assignment-vnqzytwvnjmxkufwffa8z3.streamlit.app/)** (opens on Monday 16 Nov 2026; first load takes a few seconds)
+
 ```bash
 pip install -r requirements.txt
 streamlit run app.py                        # the app (opens on Monday 16 Nov 2026)
@@ -16,6 +18,7 @@ python -m pytest -q                         # 44 tests
 ![Monday brief for 16 Nov 2026](outputs/screenshots/brief.png)
 
 **Deliverables for Monday 16 Nov:**
+- [Live app](https://rsh-global-assignment-vnqzytwvnjmxkufwffa8z3.streamlit.app/)
 - [78-second demo video](outputs/demo_walkthrough.mp4)
 - [PDF report](outputs/joy_monday_report_2026-11-16.pdf)
 - [CSV action list](outputs/action_list_2026-11-16.csv)
