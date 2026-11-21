@@ -1,0 +1,25 @@
+name: keep-alive
+
+# Free Streamlit apps sleep after a period without visitors. Visit the live app in a real
+# browser every 6 hours (and wake it if needed) so reviewers never land on a sleeping app.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/keep-alive.yml"
+      - "scripts/keep_alive.js"
+
+jobs:
+  visit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install --no-save playwright@1.63.0
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/keep_alive.js

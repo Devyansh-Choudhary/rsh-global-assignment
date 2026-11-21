@@ -7,6 +7,7 @@ exports into a short, ranked list of problems, says who owns each one, puts a ru
 PDF, CSV and WhatsApp messages to send to Supply, Marketing and the platform KAMs.
 
 **▶ Live app: [rsh-global-assignment-vnqzytwvnjmxkufwffa8z3.streamlit.app](https://rsh-global-assignment-vnqzytwvnjmxkufwffa8z3.streamlit.app/)** (opens on Monday 16 Nov 2026; first load takes a few seconds)
+If it shows *"This app has gone to sleep"*, click **Yes, get this app back up!**: it wakes in about 30 seconds. A scheduled job visits it every 6 hours to keep it awake, and the [demo video](outputs/demo_walkthrough.mp4) shows the same walkthrough.
 
 ```bash
 pip install -r requirements.txt
